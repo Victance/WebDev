@@ -7,3 +7,11 @@
 .L7 {color: green;font-size:2.6em;}
 .L8 {color: purple;font-size:2.8em;}
 .L9 {color: green;font-size:3em;}
+
+
+.BiggerFont {font-size: 150%;}
+.BiggerFont2 {font-size: 200%; font-style:italic}
+
+.layer1 {float: left;	margin-right: 35px;}
+table { border:3px solid gray; width:500px; color:white;}
+td, th { background: gray; padding: 5px;}
