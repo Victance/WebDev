@@ -1,9 +1,17 @@
-.11 {color: blue;font-size:1.2em;}
-.12 {color: red;font-size:1.4em;}
-.13 {color: gray;font-size:1.6em;}
-.14 {color: black;font-size:1.8em;}
-.15 {color: yellow;font-size:2em;}
-.16 {color: lightblue;font-size:2.4em;}
-.17 {color: green;font-size:2.6em;}
-.18 {color: purple;font-size:2.8em;}
-.19 {color: green;font-size:3em;}
+.L1 {color: blue;font-size:1.2em;}
+.L2 {color: red;font-size:1.4em;}
+.L3 {color: gray;font-size:1.6em;}
+.L4 {color: black;font-size:1.8em;}
+.L5 {color: yellow;font-size:2em;}
+.L6 {color: lightblue;font-size:2.4em;}
+.L7 {color: green;font-size:2.6em;}
+.L8 {color: purple;font-size:2.8em;}
+.L9 {color: green;font-size:3em;}
+
+
+.BiggerFont {font-size: 150%;}
+.BiggerFont2 {font-size: 200%; font-style:italic}
+
+.layer1 {float: left;	margin-right: 35px;}
+table { border:3px solid gray; width:500px; color:white;}
+td, th { background: gray; padding: 5px;}
