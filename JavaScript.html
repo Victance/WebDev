@@ -7,19 +7,47 @@
   crossorigin="anonymous"></script>
     <meta charset="utf-8">
     <title>Studying JavaScript</title>
+<style media="screen">
+
+  .class2{background: blue}
+    .class1{background: red }
+</style>
   </head>
   <body>
 
-  <<script type="text/javascript">
+<div  id="menu">
 
-  </script>
+    <ul>
+          <li>
+              <a  href="http:\\oa.edu.ua"> Podiya </a>
+          </li>
+
+    </ul>
+</div>
+
+
+<script>
+
+$("#menu li a").click(function(event){
+
+  $("#menu").addClass('class1')
+
+  $("#menu").toggleClass("class1 class2");
+  return false;
+})
+
+$("#menu").click(function(event){
+  $("div").removeClass();
+  return false;
+})
+
+
+
+</script>
+
+
 
   </body>
-  <script>
-  $("h2").css({
-  color:'red',
-  fontSize:'14px',
-  marginLeft:'10px',
-})
-  </script>
+
+
 </html>
