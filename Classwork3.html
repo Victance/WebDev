@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>Studying JavaScript</title>
+
+    <style media="screen">
+    .test{};
+    .www{};
+    </style>
+
+      </head>
+      <body>
+
+<h1>H1</h1>
+<h2>H2</h2>
+<h2 class='test'>H2</h2>
+<h3>H3</h3>
+<h4>H4</h4>
+
+<ol>
+  <li> пункт </li>
+  <li> текст</li>
+</ol>
+
+
+      <script>
+      $(":header").css({color:'red'})
+      $("li:contains(пункт )").css({color:'red'})
+
+
+      $("h2:not(.test)").css({color:'red'})
+      $(":header:not(.test)").css('color', 'red')
+      $(":header + :header").css({color:'red'})
+      </script>
+
+
+
+    </body>
+
+  </html>
