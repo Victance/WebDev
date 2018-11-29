@@ -1,16 +1,16 @@
-  div:not([class="item-list"]):not([class="all"]) {
+  div.box {
 	width: 150px;
 	height: 150px;
   display: inline-block;
   margin-right: 5px;
  }
 
-div:not([class="all"]):not([class="item-list"]):nth-child(odd) { background: black; }
-div:not([class="all"]):not([class="item-list"]):nth-child(even) { background: #009abf; }
-div:not([class="all"]):not([class="item-list"]):hover { background: #ff9f19; }
+div.box:nth-child(odd) { background: black; }
+div.box:nth-child(even) { background: #009abf; }
+div.box:hover { background: #ff9f19; }
 
 /*--------------------------------------------------------------------*/
-.item-list {
+div.item-list {
   	background-color: #f0f0f0;
   	border-bottom: 3px solid #ccc;
   	height: 35px;
@@ -34,7 +34,7 @@ div:not([class="all"]):not([class="item-list"]):hover { background: #ff9f19; }
 
 .black, .white {font: 100px Arial;}
 
-.all {
+div.all {
   padding: 30px 1px 5px 5px;
   display: inline-block;
   border: 2px solid black;
