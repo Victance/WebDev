@@ -1,0 +1,22 @@
+body{
+  margin:0px;
+  padding: 0px;
+  background-image: url(Images/10.jpg);
+
+
+}
+a img {
+  height: 35%;
+  width: 30%;
+}
+a.center img {
+  height: 35%;
+  width: 30%;
+}
+
+
+
+a{
+  text-decoration: none;
+  outline: none;
+}
