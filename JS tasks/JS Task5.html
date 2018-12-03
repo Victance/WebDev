@@ -8,15 +8,19 @@
 
   <<script type="text/javascript">
 
-  var obj = {js: 'test', jq: 'hello', css: 'world'};
+//   var obj = {js: 'test', jq: 'hello', css: 'world'};
+//
+// var arr = [];
+// var i = 0;
+//   for (var key in obj) {
+//     arr[i]=key;
+//     i++;
+//   }
+// document.write(arr);
 
-var arr = [];
-var i = 0;
-  for (var key in obj) {
-    arr[i]=key;
-    i++;
-  }
-alert(arr);
+var arr = {js: 'test', jq: 'hello', css: 'world'};
+var keys = Object.keys(arr);
+document.write(keys);
   </script>
 
   </body>
