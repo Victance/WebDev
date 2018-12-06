@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>Studying Animations</title>
+    <style>
+      div{
+        background-color: red;
+        width: 200px;
+        height: 200px;
+          }
+    </style>
+</head>
+<body>
+  <h1>Playing with DOM</h1>
+  <h2>Playing with DOM</h2>
+  <h3>Playing with DOM</h3>
+</br>
+<p>
+  Paragraph
+</p>
+
+
+  <button id="hide">Hide</button>
+  <button id="show">Show</button>
+  <button id="fo">FadeOut</button>
+  <button id="fi">FadeIn</button>
+  <button id="ani">Animation</button>
+  <div id="anim">anim</div>
+
+
+<script>
+
+  $('p').after('hello');
+  $('p').prepend('sometext');
+
+
+$("#hide").click(function () {
+  $("#anim").hide("slow");
+});
+
+$("#show").click(function () {
+    $("#anim").show("slow");
+});
+
+$("#fo").click(function () {
+  $("#anim").fadeOut();
+});
+
+$("#fi").click(function () {
+  $("#anim").fadeIn();
+});
+
+$('#ani').click(function () {
+  $('#anim').animate({
+   'left': '+=100'},2000).animate({
+    'top': '+=100'},2000)
+}); 
+
+
+
+</script>
+</body>
+</html>
