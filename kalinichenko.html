@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>Studying</title>
+</head>
+<body>
+  <form action="/request.php" autocomplete="on" method="post" class="name" name="form" onsubmit="return validate_form ( );">
+<input  name="DATA[NAME]" type="name" autofocus placeholder="введите имя" id="applicationName" required>
+<input placeholder="введите Email" name="DATA[EMAIL_WORK]" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" id="applicationEmail" required>
+<input placeholder="введите номер телефона" name="DATA[PHONE_WORK]" type="tel" pattern="(\+?\d[- .]*){7,13}" id="applicationTelephone" required>
+<input class="applicationButton" type="submit" id="button" value="Отправить"> <br>
+<input type="checkbox" name="check" checked required>Я согласен(на) на обработку персональных данных
+</form>
+
+  <!--<input type="text" name="name" placeholder="Имя" id="name" /> <br/><br/>
+  <input type="text" name="name" placeholder="Имя" id="name" /> <br/><br/>
+  <input type="text" name="name" placeholder="Имя" id="name" /> <br/><br/>
+
+ <button class="1">Perevirka</button>-->
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js">
+function validate_form() {
+                valid = true;
+                if (document.form.DATA[NAME].value == "") {
+                    alert("Вы не ввели своё имя");
+                    valid = false;
+                }
+                if (document.form.DATA[NAME].value == "") {
+                    alert("Вы не ввели своё имя");
+                    valid = false;
+                }
+                if (document.form.DATA[NAME].value == "") {
+                    alert("Вы не ввели своё имя");
+                    valid = false;
+                }
+                return valid;
+
+            }
+
+
+
+</script>
+</body>
+</html>

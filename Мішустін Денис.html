@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <title></title>
+    <style>
+    #anim{
+      background-color: red;
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      text-align: center;
+    }
+
+    * {
+      font-family: Arial, "Free Sans";
+  }
+  #container {
+      margin-top: 20px;
+      color: #fff;
+  }
+  #container #question {
+      display: block;
+      padding: 20px;
+      font-weight: bold;
+      letter-spacing: -3px;
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 40px;
+  }
+  #container div {
+      font-weight: bold;
+      letter-spacing: -3px;
+      background: #0099cc;
+      margin-bottom: 15px;
+      padding: 10px;
+      font-size: 34px;
+      color: #ffffff;
+      border-left: 20px solid #333;
+      width: 400px;
+      border-radius: 0 1.5em 1.5em 0;
+  }
+  #container div a {
+      border-radius: 0.3em;
+      text-decoration: none;
+      color: #0099cc;
+      padding: 5px 15px;
+      background: #333;
+      margin: 0 20px;
+  }
+  #container div a:hover {
+      color: #fff;
+  }
+  body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff url('images/trentanove.gif') repeat top;
+  }
+  #text {
+      margin: 0 auto;
+      width: 500px;
+      font-size: 12px;
+      color: #0099cc;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 20px;
+  }
+    </style>
+  </head>
+  <body>
+  <form action="/save/">
+    <input type="text" name="name" value=""/><br>
+    <input type="text" name="email" value=""/><br>
+    <input type="submit"/>
+  </form>
+
+  <div id="container">
+      <span id="question">Який твій улюблений гравець</span>
+      <div><span>0</span><a href="">За</a>Роналду</div>
+      <div><span>0</span><a href="">За</a>Ярмоленко</div>
+      <div><span>0</span><a href="">За</a>Мессі</div>
+      <div><span>0</span><a href="">За</a>Баку</div>
+      <div><span>0</span><a href="">За</a> Неймар</div>
+      <div><span>0</span><a href="">За</a> Коноплянка</div>
+  </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+      $('form').submit(function() {
+        $(this).find ('.error').remove()
+
+        if ($(this).find('input[name=email]').val() == '') {
+        $(this).find('input[name=email]').before('<div class="error">Введіть дані </div>');
+        return false;
+        }
+
+        if ($(this).find('input[name=name]').val() == '') {
+        $(this).find('input[name=email]').before('<div class="error">Введіть дані</div>');
+        return false;
+        }
+
+        $.post(
+          $(this).attr('action'),
+          $(this).serialize()
+        );
+
+        return false;
+      });
+      });
+$('document').mousemove(function(event){
+  var X = event.pageX;
+  var Y = event.pageY;
+  console.log("x=" + X +","+"y="+ Y)
+});
+
+
+      $(document).ready(function() {
+    $("#container div a").click(function() {
+        $(this).parent().animate({
+           width: '+=100px'
+        }, 500);
+
+        $(this).prev().html(parseInt($(this).prev().html()) + 1);
+        return false;
+    });
+});
+
+
+
+
+    </script>
+  </body>
+</html>
