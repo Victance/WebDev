@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <script
+<head>
+  <script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
-    <meta charset="utf-8">
-    <title>Studying Animations</title>
-    <style>
-      div{
-        background-color: red;
-        width: 200px;
-        height: 200px;
-          }
-    </style>
+  <meta charset="utf-8">
+  <title>Studying Animations</title>
+  <style>
+  div{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    text-align: center;
+  }
+  </style>
 </head>
 <body>
   <h1>Playing with DOM</h1>
@@ -25,53 +27,80 @@
 </p>
 
 
-  <button id="hide">Hide</button>
-  <button id="show">Show</button>
-  <button id="fo">FadeOut</button>
-  <button id="fi">FadeIn</button>
-  <button id="ani">Animation</button>
-  <div id="anim">anim</div>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+<button id="fadeOut">FadeOut</button>
+<button id="fadeIn">FadeIn</button>
+<button id="fadeToggle">FadeToggle</button>
+<button id="slideToggle">SlideToggle</button>
+<button id="MyAnimation1">MyAnimation1</button>
+<button id="MyAnimation2">MyAnimation2</button>
+<button id="MyAnimation3">MyAnimation3</button>
+
+<pre>
+</pre>
+
+<div id="anim" >Animated square</div>
 
 
 <script>
+// $("#hide").click(function () {
+//   $("#anim").hide("slow");
+// });
 
-  $('p').after('hello');
-  $('p').prepend('sometext');
-
-
-$("#hide").click(function () {
-  $("#anim").hide("slow");
+$("#hide").click(function(){
+  $("#anim").hide("slow", function(){
+    alert("Square has been hidden");
+  });
 });
+
 
 $("#show").click(function () {
-    $("#anim").show("slow");
+  $("#anim").show("fast");
 });
 
-$("#fo").click(function () {
+$("#fadeOut").click(function () {
   $("#anim").fadeOut();
 });
 
-$("#fi").click(function () {
+$("#fadeIn").click(function () {
   $("#anim").fadeIn();
 });
 
-<<<<<<< HEAD
-$('#ani').click(function () {
+$("#fadeToggle").click(function () {
+  $("#anim").fadeToggle();
+});
+
+$("#slideToggle").click(function () {
+  $("#anim").slideToggle();
+});
+
+
+$("#MyAnimation1").click(function () {
+  $("#anim").animate({
+    'opacity':'-=0.1',
+    'height':'+=10px'
+    });
+ });
+
+
+$('#MyAnimation2').click(function(){
   $('#anim').animate({
-   'left': '+=100'},2000).animate({
-    'top': '+=100'},2000)
-}); 
-
-=======
-// $('#ani').click(function () {
-//   $('#anim').animate({
-//    'left': '+=100'},2000).animate({
-//     'top': '+=100'},2000)
-// });
-//
->>>>>>> 467ea5850a60e5ef1839f03ec2dda7bacb0fe3f7
+    'left': '+=100'},1000).animate({
+      'top': '+=100'},1000)
+    });
 
 
-</script>
+$('#MyAnimation3').click(function(){
+  $('#anim').animate({
+    'left': '+=100'},1000).animate({
+      'top': '+=100'}, {queue:false});
+    });
+
+
+
+
+
+  </script>
 </body>
 </html>
