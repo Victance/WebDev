@@ -47,7 +47,7 @@
 </head>
 <body>
 
-  <form action="/save/">
+  <!-- <form action="/save/">
     <input type="text" name="name" value=""/><br>
     <input type="text" name="email" value=""/><br>
     <input type="submit"/>
@@ -61,7 +61,7 @@
 <button id="Right">Right</button>
 <button id="Left">Left</button>
 
-<pre></pre>
+<pre></pre> -->
 
 <div id="container">
     <span id="question">Какая ваша любимая CMS?</span>
@@ -71,33 +71,33 @@
 
 </div>
 
-<pre></pre>
+<!-- <pre></pre>
 
-<div class id="anim" >Animated square</div>
+<div class id="anim" >Animated square</div> -->
 
   <script>
 
-    $("#background").click(function () {
-      $("body").css("background", "green");
-    });
-
-
-    $('#Right').click(function(){
-      $('#anim').animate({
-        'left': '+=300'},800)
-        });
-
-    $('#Left').click(function(){
-      $('#anim').animate({
-        'left': '-=300'},800)
-        });
-
-
-            $(document).mousemove(function(e){
-          var X = e.pageX;
-          var Y = e.pageY;
-          console.log("X: " + X + " Y: " + Y);
-      });
+    // $("#background").click(function () {
+    //   $("body").css("background", "green");
+    // });
+    //
+    //
+    // $('#Right').click(function(){
+    //   $('#anim').animate({
+    //     'left': '+=300'},800)
+    //     });
+    //
+    // $('#Left').click(function(){
+    //   $('#anim').animate({
+    //     'left': '-=300'},800)
+    //     });
+    //
+    //
+    //         $(document).mousemove(function(e){
+    //       var X = e.pageX;
+    //       var Y = e.pageY;
+    //       console.log("X: " + X + " Y: " + Y);
+    //   });
 
       $(document).ready(function() {
     $("#container div a").click(function() {
@@ -110,28 +110,28 @@
     });
 });
 
-$(function(){
-  $('form').submit(function() {
-    $(this).find ('.error').remove()
-
-    if ($(this).find('input[name=email]').val() == '') {
-    $(this).find('input[name=email]').before('<div class="error">Введіть дані </div>');
-    return false;
-    }
-
-    if ($(this).find('input[name=name]').val() == '') {
-    $(this).find('input[name=email]').before('<div class="error">Введіть дані</div>');
-    return false;
-    }
-
-    $.post(
-      $(this).attr('action'),
-      $(this).serialize()
-    );
-
-    return false;
-  });
-  });
+// $(function(){
+//   $('form').submit(function() {
+//     $(this).find ('.error').remove()
+//
+//     if ($(this).find('input[name=email]').val() == '') {
+//     $(this).find('input[name=email]').before('<div class="error">Введіть дані </div>');
+//     return false;
+//     }
+//
+//     if ($(this).find('input[name=name]').val() == '') {
+//     $(this).find('input[name=email]').before('<div class="error">Введіть дані</div>');
+//     return false;
+//     }
+//
+//     $.post(
+//       $(this).attr('action'),
+//       $(this).serialize()
+//     );
+//
+//     return false;
+//   });
+//   });
 
 </script>
 
