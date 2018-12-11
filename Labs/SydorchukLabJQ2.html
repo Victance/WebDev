@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <style>
+  .red {background-color: red}
+  .error{
+    display: inline-block;
+    margin-left: 10px;
+    text-decoration: underline;
+    color: red}
+  #anim{
+    background-color: green;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    text-align: center;
+  }
+
+  #container div {
+    font-weight: bold;
+    letter-spacing: -3px;
+    background: gray;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 34px;
+    color: #ffffff;
+    border: 5px solid #333;
+    width: 300px;
+
+
+  }
+  #container div a {
+    border-radius: 0.3em;
+    text-decoration: none;
+    color: white;
+    padding: 5px 15px;
+    background: #333;
+    margin: 0 20px;
+  }
+  #container div a:hover {
+    color: #fff;
+  }
+  </style>
+  <meta charset="utf-8">
+  <title>Studying jQuery</title>
+
+</head>
+<body>
+  <button id="background">Change Background</button>
+      <pre></pre>
+  <form action="/save/">
+    <input type="text" autofocus placeholder="Введіть ім'я  та прізвище" name="name1" value="" required pattern="^[а-яА-Яa-zA-Z]+$" />
+    <input type="email" autofocus placeholder="Введіть e-mail" name="name2" value="" required  /><br>
+    <input type="submit"/>
+  </form>
+
+  <pre></pre>
+
+  <div id="container">
+    <span id="question"> Якому кандидату ви віддаєте перевагу?</span>
+    <div><span>0</span><a href="">За</a>Кандидат 1</div>
+    <div><span>0</span><a href="">За</a>Кандидат 2</div>
+    <div><span>0</span><a href="">За</a>Байдуже</div>
+  </div>
+
+    <button id="Right">Right</button>
+    <button id="Left">Left</button>
+    <pre></pre>
+    <div id="anim">Animated square</div>
+
+  <script>
+
+  $("#background").click(function () {
+    $("body").toggleClass("red");
+  });
+
+
+  $('#Right').click(function(){
+    $('#anim').animate({
+      'left': '+=300'},800)
+    });
+
+    $('#Left').click(function(){
+      $('#anim').animate({
+        'left': '-=300'},800)
+      });
+
+
+      $(document).mousemove(function(e){
+        var X = e.pageX;
+        var Y = e.pageY;
+        console.log("X: " + X + " Y: " + Y);
+      });
+
+      $(document).ready(function() {
+        $("#container div a").click(function() {
+          $(this).parent().animate({
+            width: '+=100px'
+          }, 100);
+          $(this).prev().html(parseInt($(this).prev().html()) + 1);
+          return false;
+        });
+      });
+
+
+
+        // $('form').submit(function() {
+        //   $(this).find ('.error').remove()
+        //
+        //   if ($(this).find('input[name=name1]').val() == '') {
+        //     $(this).find('input[name=name1]').after('<div class="error"> Введіть дані!</div>');
+        //     return false;
+        //   }
+        //
+        //   if ($(this).find('input[name=name2]').val() == '') {
+        //     $(this).find('input[name=name2]').after('<div class="error"> Введіть дані! </div>');
+        //     return false;
+        //   }
+        //
+        //   $.post(
+        //     $(this).attr('action'),
+        //     $(this).serialize()
+        //   );
+        //
+        //   return false;
+        // });
+
+
+    </script>
+
+  </body>
+  </html>

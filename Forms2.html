@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  <form action="/save/">
+    <input type="text" name="name" value=""/><br>
+    <input type="text" name="email" value=""/><br>
+    <input type="submit"/>
+  </form>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.mid.js">  </script>
+    <script type="text/javascript">
+    $(function(){
+      $('form').submit(function() {
+        $(this).find ('.error').remove()
+
+        if ($(this).find('input[name=name]').val() == '') {
+        $(this).find('input[name=name]').before('<div class="error">Введіть ім\'я</div>');
+        return false;
+        }
+
+        if ($(this).find('input[name=email]').val() == '@') {
+        $(this).find('input[name=email]').before('<div class="error">Введіть email</div>');
+        return false;
+        }
+
+        $.post(
+          $(this).attr('action'),
+          $(this).serialize()
+        );
+
+        return false;
+      });
+      });
+
+    </script>
+  </body>
+</html>

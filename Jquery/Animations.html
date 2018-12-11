@@ -18,13 +18,6 @@
   </style>
 </head>
 <body>
-  <h1>Playing with DOM</h1>
-  <h2>Playing with DOM</h2>
-  <h3>Playing with DOM</h3>
-</br>
-<p>
-  Paragraph
-</p>
 
 
 <button id="hide">Hide</button>
@@ -36,11 +29,13 @@
 <button id="MyAnimation1">MyAnimation1</button>
 <button id="MyAnimation2">MyAnimation2</button>
 <button id="MyAnimation3">MyAnimation3</button>
+<button id="Clean">Clean</button>
 
 <pre>
 </pre>
 
 <div id="anim" >Animated square</div>
+<!-- <div id="box" >Animated</div> -->
 
 
 <script>
@@ -81,10 +76,31 @@ $('#MyAnimation2').click(function(){
     });
 $('#MyAnimation3').click(function(){
   $('#anim').animate({
-    'left': '+=100'},1000).animate({
-      'top': '+=100'}, {queue:false});
-
+    'left': '+=100'},).animate({
+      'top': '+=100'}).animate({
+        'right': '-=100'}).animate({
+          'bottom': '+=100'}, {queue:false});
     });
+
+    $("#Clean").click(function () {
+          location.reload();
+      });
+
+
+//       var customStep = function(now, obj) {
+// obj.elem; // объект анимации
+// obj.prop; // параметр, который анимируется
+// obj.start; // начальное значение
+// obj.end; // конечное значение
+// obj.pos; // коэффициент, изменяется от 0 до 1
+// obj.options; // опции настроек анимации
+// now; // текущее значение анимированного параметра, вычисляется как
+//  // now = (obj.end - obj.start) * obj.pos
+// $(this).html(obj.prop +': '+now+obj.unit); // вывод текста
+// }
+// $("#box").animate({height: "+=10px"}, {step: customStep});
+//
+
   </script>
 </body>
 </html>
