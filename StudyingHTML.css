@@ -17,6 +17,39 @@ table { border:3px solid gray; width:500px; color:white;}
 td, th { background: gray; padding: 5px;}
 
 
+/*  */
+
+.item-list {
+    height: 40px;
+    background:#F0F0F0;
+    border-bottom: 3px solid #CCCCCC;
+
+}
+.pager li {
+    list-style-type: none;
+    float: left;
+    width: 30px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+}
+.pager li a, .pager li span {
+    text-decoration: none;
+    color: #8B2B28;
+    display: block;
+    height: 43px;
+    width: 30px;
+}
+li:hover {
+    background: #CCCCCC;
+    border-bottom: 3px solid #373737;
+    color: #000000;
+}
+.pager li a:hover, .pager li span:hover {
+    color: #000000;
+}
+
+/*  */
 
 .item-list {
     height: 40px;

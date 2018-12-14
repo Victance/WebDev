@@ -1,44 +1,51 @@
-  div.box {
-	width: 150px;
-	height: 150px;
+div.box {
+  width: 150px;
+  height: 150px;
   display: inline-block;
   margin-right: 5px;
- }
+}
 
 div.box:nth-child(odd) { background: black; }
 div.box:nth-child(even) { background: #009abf; }
 div.box:hover { background: #ff9f19; }
 
 /*--------------------------------------------------------------------*/
-div.item-list {
-  	background-color: #f0f0f0;
-  	border-bottom: 3px solid #ccc;
-  	height: 35px;
-  }
-  .pager li {
-  	list-style: none;
-  	display: inline-block;
-  	height: 35px;
-  	padding: 0 20px;
-  	line-height: 35px;
+.item-list {
+  height: 40px;
+  background:#F0F0F0;
+  border-bottom: 3px solid #CCCCCC;
 
-  }
-  .pager li a {
-		text-decoration: none;
-		color: #720000;
-  }
-  .pager-current {
-  	background-color: #ccc;
-  	border-bottom: 3px solid #373737;
-  }
-
+}
+.pager li {
+  list-style-type: none;
+  float: left;
+  width: 30px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+.pager li a, .pager li span {
+  text-decoration: none;
+  color: #8B2B28;
+  display: block;
+  height: 43px;
+  width: 30px;
+}
+li:hover {
+  background: #CCCCCC;
+  border-bottom: 3px solid #373737;
+  color: #000000;
+}
+.pager li a:hover, .pager li span:hover {
+  color: #000000;
+}
 
 
 /*--------------------------------------------------------------------*/
 
 .black, .white {font: 100px Arial;}
 
-div.all {
+div.container {
   padding: 30px 1px 5px 5px;
   border: 2px solid black;
   display: inline-block;

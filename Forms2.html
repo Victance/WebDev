@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <style>
+    .error{
+      display: inline-block;
+      margin-left: 10px;
+      text-decoration: underline;
+      color: red}
+      </style>
+  </head>
+  <body>
+
+    <form action="/save/">
+      <input type="text" autofocus placeholder="Введіть ім'я  та прізвище" name="name1" value=""  /><br>
+      <!-- <input type="tel" autofocus placeholder="Введіть e-mail" name="name2" value=""  /><br> -->
+      <input type="submit"/>
+    </form>
+
+
+    <script type="text/javascript">
+    $('form').submit(function() {
+      $(this).find ('.error').remove()
+
+      if ($(this).find('input[name=name1]').val().empty()) {
+        $(this).find('input[name=name1]').after('<div class="error"> Введіть дані!</div>');
+        return false;
+      }
+      //
+      // if ($(this).find('input[name=name2]').val() == '') {
+      //   $(this).find('input[name=name2]').after('<div class="error"> Введіть дані! </div>');
+      //   return false;
+      // }
+
+      $.post(
+        $(this).attr('action'),
+        $(this).serialize()
+      );
+
+      return false;
+    });
+
+
+    </script>
+  </body>
+</html>
