@@ -1,0 +1,15 @@
+table{
+   width: 400px;
+  height: 200px;
+}
+
+p {
+	font-style: italic;
+  font-family: Arial;
+  line-height: 30px;
+  text-indent: 30px;
+}
+
+h1{
+  font-weight: normal;
+}

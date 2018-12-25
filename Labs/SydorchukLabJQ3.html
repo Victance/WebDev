@@ -6,6 +6,30 @@
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
   <style>
+  div#parent {
+
+
+    border: 5px solid #333;
+    width: 800px;
+  height: 50px;
+
+  }
+
+div#first  {
+  width: 0%;
+  height: 50px;
+  background-color: gray;
+}
+div#second  {
+  width: 0%;
+  height: 50px;
+  background-color: gray;
+}
+div#third  {
+  width: 0%;
+  height: 50px;
+  background-color: gray;
+}
 
   </style>
   <meta charset="utf-8">
@@ -14,10 +38,35 @@
 </head>
 <body>
 
+    <div id="parent">
+        <div id="first"></div>
+    </div>
+<pre></pre>
+    <div id="parent">
+        <div id="second"></div>
+    </div>
+<pre></pre>
+    <div id="parent">
+        <div id="third"></div>
+    </div>
+
+
+
   <script>
+  $(document).ready(function() {
+    $("#container div a").click(function() {
+      $(this).parent().animate({
+        width: '+=100px'
+      }, 100);
+      $(this).prev().html(parseInt($(this).prev().html()) + 1);
+      return false;
+    });
+  });
 
-
-
+  $("div#parent").click(function(v) {
+    var r= 10 ;
+    $("div#third").css("width",r"%";
+});
     </script>
 
   </body>
