@@ -71,19 +71,31 @@ color:blue;
 
 #ul4 a{
   text-decoration: none;
-  border: 1px solid black;
+  border: 1px solid #0081E7;
   color:white;
   background-color: #0081E7;
   margin-bottom: 5px;
   display: block;
-  padding: 5px;
+
   font-weight: bold;
 }
-#ul4 a:hover, #menu4 a.active{
+#menu4 a:hover, #menu4 a.active{
+  background-color: white;
   color:blue;
   cursor: pointer;
-  background: white url("plane.png") no-repeat 90% center;
+
 }
+
+#menu4 #ul4 span{
+  display: block;
+margin: 5px 20px 5px 5px;
+}
+#menu4 a:hover span, #menu4 a.active span{
+  background: transparent url("blue.png") no-repeat right center;
+  color:blue;
+  cursor: pointer;
+}
+
 /* ------------------------------------------------------------------------- */
 #menu5{
   font-size: 24pt;
@@ -130,4 +142,97 @@ color:blue;
 
 .clearfix{
   clear: both;
+}
+/* ------------------------------------------------------------------------- */
+#menu7{
+  font-size: 24pt;
+}
+#menu7 li{
+  list-style-type: none;
+  display: inline-block;
+}
+#menu7 a{
+  text-decoration: none;
+  display:block;
+  color:#CBCBCB;
+  padding: 30px 5px 5px 5px;
+
+}
+#a1{
+  background: url("1.png") no-repeat top center;
+}
+#a2{
+  background: url("2.png") no-repeat top center;
+}
+#a3{
+  background: url("3.png") no-repeat top center;
+}
+#a4{
+  background: url("4.png") no-repeat top center;
+}
+#a5{
+  background: url("5.png") no-repeat top center;
+}
+#menu7 #a1:hover {
+  color:#0081E7;
+  background: url("1-h.png") no-repeat top center;
+}
+#menu7 #a2:hover {
+  color:#0081E7;
+  background: url("2-h.png") no-repeat top center;
+}
+#menu7 #a3:hover {
+  color:#0081E7;
+  background: url("3-h.png") no-repeat top center;
+}
+#menu7 #a4:hover {
+  color:#0081E7;
+  background: url("4-h.png") no-repeat top center;
+}
+#menu7 #a5:hover {
+  color:#0081E7;
+  background: url("5-h.png") no-repeat top center;
+}
+/* ------------------------------------------------------------------------- */
+#menu8{
+  font: 20pt Arial;
+  background-color: #FC9D00;
+}
+#menu8 li{
+  list-style-type: none;
+  display: inline-block;
+  /* margin: 0px 20px */
+}
+#menu8 a{
+  text-decoration: none;
+  display:block;
+  color:white;
+  padding: 5px;
+}
+
+#menu8 a:hover{
+  background-color: #E93301;
+}
+/* ------------------------------------------------------------------------- */
+#menu9{
+  text-align: center;
+  font: 18pt Arial;
+}
+#menu9 table{
+  border-collapse: collapse;
+  color: #506361;
+
+}
+#menu9 th{
+  border-bottom: 1px solid black;
+  padding: 3px;
+}
+#menu9 td:nth-child(6),#menu9 td:nth-child(7),#menu9 th:nth-child(6),#menu9 th:nth-child(7){
+  color: #8CA2C1;
+} 
+#menu9 th:hover, #menu9 td:hover{
+  text-decoration: underline;
+}
+#menu9 .active{
+  color:red;
 }
