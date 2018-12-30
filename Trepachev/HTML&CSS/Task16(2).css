@@ -1,0 +1,25 @@
+body{
+  margin:0;
+}
+div.wrapper{
+  width: 600px;
+  margin: 0px auto;
+  border: 1px solid green;
+}
+ul{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+  width: 145.5px;
+  height: 100px;
+    outline: 1px solid black;
+    display: inline-block;
+    margin-right: 6px;
+    margin-bottom: 10px
+
+}
+li.w1{
+  margin-right: 0;
+}
