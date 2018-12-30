@@ -1,0 +1,27 @@
+div.wrapper{
+  display:flex;
+  border: 1px solid blue;
+background-color: #2696E8;
+width: 80%;
+
+flex-direction: row;
+margin: 0px auto;
+justify-content: space-between;
+flex-wrap: wrap;
+align-items:stretch;
+}
+div.wrapper div{
+  flex-grow: 1;
+  border: 1px solid blue;
+}
+div.wrapper div a{
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+
+}
+div.wrapper div a:hover{
+  color: #2696E8;
+  background-color: white;
+}
