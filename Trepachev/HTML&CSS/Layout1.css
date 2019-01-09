@@ -1,0 +1,59 @@
+.wrapper{
+width: 1000px;
+margin: 0px auto;
+}
+header, aside, footer{
+  outline: 1px solid black;
+}
+header{
+  overflow:hidden;
+  padding: 10px 0px;
+}
+header img{
+  float: left;
+}
+header p{
+  font-weight: bold;
+  font-size: 18pt;
+  margin: 0;
+}
+aside{
+  width: 200px;
+  min-height: 500px;
+  
+}
+aside.right{
+  float: right;
+}
+aside.left{
+  float: left;
+}
+.clearfix{
+  clear: both;
+}
+main{
+margin: 0px 200px;
+padding: 0px 20px
+}
+footer{
+  text-align: center;
+  padding-top:180px;
+}
+ul{
+  padding: 0;
+  border: 1px solid black;
+  display: inline-block;
+}
+a{
+  text-decoration: none;
+  display:block;
+}
+a:hover, a.active{
+  color: red;
+  text-decoration: underline;
+}
+li{
+  margin: 5px;
+  list-style: none;
+  display: inline-block;
+}
